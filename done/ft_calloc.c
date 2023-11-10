@@ -31,7 +31,7 @@ void	*ft_calloc(unsigned int count, unsigned int size)
 	return ((void *)d);
 }
 
-/*
+
 int main()
 {
     char *d;
@@ -42,4 +42,4 @@ int main()
 
     c = calloc(1, 4);
     printf("%p", c);
-}*/
+}

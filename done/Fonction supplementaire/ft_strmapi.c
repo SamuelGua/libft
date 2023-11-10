@@ -34,7 +34,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     return (d);
 }
 
-
+// test
 char addOne(unsigned int i, char c) 
 {
     return (i + c);
