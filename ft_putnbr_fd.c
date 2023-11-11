@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
+/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:06:04 by scely             #+#    #+#             */
-/*   Updated: 2023/11/08 16:49:57 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/11 21:11:42 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
@@ -30,7 +30,7 @@ void	ft_putnbr_fd(int n, int fd)
 		if (n < 0)
 		{
 			if (!b)
-				write(1, '-', 1);
+				ft_putchar_fd( '-', fd);
 			a = -a;
 		}
 		ft_putchar_fd((a + '0'), fd);

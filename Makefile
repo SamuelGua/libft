@@ -3,6 +3,7 @@ NAME = libft.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
+AR = ar rcs
 SRC = $(wildcard *.c)
 OBJ	= $(SRC:.c=.o)
 
@@ -14,7 +15,7 @@ all : $(NAME)
 	$(CC) $(CFLAGS) -o $@  -c $<
 
 $(NAME) : $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	$(AR) $(NAME) $(OBJ)
 
 clean :
 	$(RM) $(OBJ)

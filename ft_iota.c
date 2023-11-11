@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iota.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
+/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:46:39 by scely             #+#    #+#             */
-/*   Updated: 2023/11/08 17:03:43 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/11 20:28:34 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_nulen(int o)
+static int	ft_nulen(int o)
 {
 	int	i;
 

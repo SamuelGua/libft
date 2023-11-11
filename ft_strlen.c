@@ -6,11 +6,13 @@
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:56:51 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 13:48:19 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/11 21:13:02 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
@@ -18,12 +20,4 @@ int	ft_strlen(const char *s)
 	while (s[i])
 		i++;
 	return (i);
-}
-
-#include <stdio.h>
-int main()
-{
-	int i = ft_strlen("LOiougiyL");
-
-	printf("%d",i);
 }

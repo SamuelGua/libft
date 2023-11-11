@@ -6,13 +6,13 @@
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:30:04 by samuelcely        #+#    #+#             */
-/*   Updated: 2023/11/11 12:57:43 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/11 21:15:39 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-int	ft_strlen(char *to_find)
+/*int	ft_strlen(char *to_find)
 {
 	int	i;
 
@@ -20,17 +20,17 @@ int	ft_strlen(char *to_find)
 	while (to_find[i])
 		i++;
 	return (i);
-}
+}*/
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int	i;
+	unsigned int	i;
 	int	j;
 
 	i = 0;
 	j = ft_strlen(needle);
 	if (j == 0)
-		return (haystack);
+		return ( (char *)haystack);
 	while (haystack[i] && i < len)
 	{
 		j = 0;
@@ -40,7 +40,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 			{
 				j++;
 				if (needle[j] == '\0')
-					return (&haystack[i]);
+					return ( (char *)&haystack[i]);
 			}
 		}
 		i++;

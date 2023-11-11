@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
+/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:13:29 by scely             #+#    #+#             */
-/*   Updated: 2023/11/08 16:45:06 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/11 20:31:31 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_strlen(const char *s)
+/*int	ft_strlen(const char *s)
 {
 	int	i;
 
@@ -21,7 +20,7 @@ int	ft_strlen(const char *s)
 	while (s[i])
 		i++;
 	return (i);
-}
+}*/
 
 char	*ft_strjoin(char const	*s1, char const *s2)
 {

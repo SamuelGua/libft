@@ -6,9 +6,11 @@
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:51:42 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 13:46:45 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/11 20:29:18 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

@@ -6,9 +6,11 @@
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:34:21 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 13:36:26 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/11 20:29:12 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split copie.c                                   :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:42:55 by scely             #+#    #+#             */
-/*   Updated: 2023/11/10 23:33:48 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/11 21:12:14 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int    ft_strlen_split(const char *s, char c)
 {
@@ -93,12 +92,4 @@ char **ft_split(char const *s, char c)
        }
       
        return(new);
-}
-int main()
-{
-    char *d = "ORIGAMI";
-    char **new = ft_split(d, '.');
-    // char **c = ft_split(d, ',');
-    printf("%s", new[0]);
-    //free(new);
 }

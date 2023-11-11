@@ -6,15 +6,13 @@
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:29:10 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 09:23:54 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/11 21:16:33 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include <stdio.h>
-#include <stdlib.h>
-
-int	ft_strlen(const char *s)
+/*int	ft_strlen(const char *s)
 {
 	int	i;
 
@@ -22,9 +20,9 @@ int	ft_strlen(const char *s)
 	while (s[i])
 		i++;
 	return (i);
-}
+}*/
 
-int find_start(char const *s1, char const * set)
+static int find_start(char const *s1, char const * set)
 {
     int i;
     int k;
@@ -46,7 +44,7 @@ int find_start(char const *s1, char const * set)
     return (i);
 }
 
-int find_end(char const *s1, char const * set)
+static int find_end(char const *s1, char const * set)
 {
     int i;
     int k;
@@ -94,16 +92,4 @@ char *ft_strtrim(char const *s1, char const *set)
         }
         new[k] = '\0';
     return (new);
-
-}
-
-int main()
-{
-    int i = 0;
-    char *d = "__._J'ar_rive_.__";
-    char *set = "_.";
-    char *new;
-    printf("%d\n", find_start(d,set));
-    printf("%d\n", find_end(d,set));
-    printf("%s", ft_strtrim(d, set));
 }

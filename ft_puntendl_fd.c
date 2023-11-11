@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puntendl_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
+/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:02:23 by scely             #+#    #+#             */
-/*   Updated: 2023/11/08 16:51:29 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/11 20:56:07 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
