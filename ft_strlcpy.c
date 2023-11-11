@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 14:39:33 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 09:57:56 by samuelcely       ###   ########.fr       */
+/*   Created: 2023/11/07 17:00:48 by scely             #+#    #+#             */
+/*   Updated: 2023/11/11 13:20:07 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdio.h>
-#include <string.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-    while (n > 0)
-    {
-        *(char *)dest = *(char *)src;
-        dest++;
-        src++;;
-        n--;
-    }
-    return(dest);
-}
+	size_t	i;
 
+	i = 0;
+	while (i != dstsize)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	while (src[i])
+		i++;
+	return ((size_t)i);
+}
 int main()
 {
-    char s[10] = "trans";
-    char *c = "WAPWQPPO";
-
-    ft_memcpy(s, c, 4);
-    printf("%s\n", s);
-
-    char b[10] = "trans";
-    char *r = "WAPWQPPO";
-    memcpy(b, r, 4);
-    printf("%s", b);
+    char s[10] = "origami";
+    char c[10] = "master";
+    printf("%zu", ft_strlcpy(s, c, 5));
+    return (0);
 }

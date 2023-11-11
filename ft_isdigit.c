@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 14:39:33 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 09:57:56 by samuelcely       ###   ########.fr       */
+/*   Created: 2023/11/06 11:34:21 by scely             #+#    #+#             */
+/*   Updated: 2023/11/11 13:36:26 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-void *ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_isdigit(int c)
 {
-    while (n > 0)
-    {
-        *(char *)dest = *(char *)src;
-        dest++;
-        src++;;
-        n--;
-    }
-    return(dest);
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
 }
 
+#include <unistd.h>
+#include <stdio.h>
 int main()
 {
-    char s[10] = "trans";
-    char *c = "WAPWQPPO";
+	//ISDIGIT
+	printf(" / :%d\n", ft_isdigit(47));
+	printf(" J :%d\n", ft_isdigit(74));
+	printf(" 9 :%d\n", ft_isdigit(57));
 
-    ft_memcpy(s, c, 4);
-    printf("%s\n", s);
-
-    char b[10] = "trans";
-    char *r = "WAPWQPPO";
-    memcpy(b, r, 4);
-    printf("%s", b);
 }

@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 14:39:33 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 09:57:56 by samuelcely       ###   ########.fr       */
+/*   Created: 2023/11/06 11:04:49 by scely             #+#    #+#             */
+/*   Updated: 2023/11/11 13:33:12 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-void *ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_isalpha(int c)
 {
-    while (n > 0)
-    {
-        *(char *)dest = *(char *)src;
-        dest++;
-        src++;;
-        n--;
-    }
-    return(dest);
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	else
+		return (0);
 }
 
+#include <unistd.h>
+#include <stdio.h>
 int main()
 {
-    char s[10] = "trans";
-    char *c = "WAPWQPPO";
 
-    ft_memcpy(s, c, 4);
-    printf("%s\n", s);
-
-    char b[10] = "trans";
-    char *r = "WAPWQPPO";
-    memcpy(b, r, 4);
-    printf("%s", b);
+	//ISALPHA
+	printf(" ! :%d\n", ft_isalpha(33));
+	printf(" J :%d\n", ft_isalpha(74));
+	printf(" t :%d\n", ft_isalpha(116));
 }

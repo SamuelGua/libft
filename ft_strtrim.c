@@ -6,7 +6,7 @@
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:29:10 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 00:01:29 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/11 09:23:54 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,19 @@ int find_start(char const *s1, char const * set)
 
     i = 0;
     k = 0;
-    while()
-
-            if (set[k])
+    while(s1[i])
+    {
+            if (set[k] == '\0')
                 return (i);
-    /*while (s1[i])
-        {
-            k = 0;
-            if (s1[i] == set[k])
-                {
+            else if (s1[i] == set[k])
+            {
                 i++;
-                k++;    
-                }
-                else
-                    return (i);
-        }
-        return (i);*/
+                k = 0;
+            }
+            else
+                k++;
+    }
+    return (i);
 }
 
 int find_end(char const *s1, char const * set)
@@ -56,20 +53,22 @@ int find_end(char const *s1, char const * set)
     int l;
 
     l = 0;
+    k = 0;
     i = ft_strlen(s1) - 1;
-    while (s1[i])
-        {
-            k = 0;
-            if (s1[i] == set[k])
-                {
+    while(s1[i])
+    {
+            if (set[k] == '\0')
+                return (l);
+            else if (s1[i] == set[k])
+            {
                 i--;
+                l++;
+                k = 0;
+            }
+            else
                 k++;
-                l++;   
-                }
-                else
-                    return (l);
-        }
-        return (l);
+    }
+    return (l);
 }
 
 char *ft_strtrim(char const *s1, char const *set)

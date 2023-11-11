@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
+/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:14:24 by scely             #+#    #+#             */
-/*   Updated: 2023/11/08 10:18:54 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/11 10:15:47 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,44 @@
 #include <stdio.h>
 
 
-void *ft_memmove(void *dest, const void *src, unsigned int n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-    while ( n > 0)
+    char *dest2;
+    char *src2;
+    int i;
+    
+    dest2 = (char *)dest;
+    src2 = (char *)src;
+    i = 0;
+    if (dest2 > src2)
     {
-        
+        while ( n > 0)
+        {
+            n--;
+            dest2[n] = src2[n];
+        }
     }
+    else
+    {
+         while ( i < n)
+        {
+            dest2[i] = src2[i];
+            i++;
+        } 
+    }
+    return (dest2);
 }
-
 
 int main()
 {
-    char dest[7] = "Jarryp";
-    char src[9] = "LoLPoP89";
-    memcpy(dest, src, 8);
-    printf("%s\n", dest);
+    char s[10] = "trans";
+    char *c = "WAPWQPPO";
 
-    char des[7] = "Jarryp";
-    char sr[9] = "LoLPoP89";
-    memmove(des, sr, 8);
-    printf("%s", des);
+    ft_memmove(s, c, 4);
+    printf("%s\n", s);
+
+    char b[10] = "trans";
+    char *r = "WAPWQPPO";
+    memcpy(b, r, 4);
+    printf("%s", b);
 }
