@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split copie.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
+/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:42:55 by scely             #+#    #+#             */
-/*   Updated: 2023/11/09 12:51:10 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/10 23:33:48 by samuelcely       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,9 +96,9 @@ char **ft_split(char const *s, char c)
 }
 int main()
 {
-    char *d = "OR.I..GAMI";
+    char *d = "ORIGAMI";
     char **new = ft_split(d, '.');
     // char **c = ft_split(d, ',');
-    printf("%s", new[2]);
+    printf("%s", new[0]);
     //free(new);
 }
