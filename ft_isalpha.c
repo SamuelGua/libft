@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:04:49 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 20:28:58 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/12 08:09:51 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,4 @@ int	ft_isalpha(int c)
 		return (1);
 	else
 		return (0);
-}
-
-#include <unistd.h>
-#include <stdio.h>
-int main()
-{
-
-	//ISALPHA
-	printf(" ! :%d\n", ft_isalpha(33));
-	printf(" J :%d\n", ft_isalpha(74));
-	printf(" t :%d\n", ft_isalpha(116));
 }

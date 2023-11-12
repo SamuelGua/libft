@@ -6,16 +6,16 @@
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:25:00 by samuelcely        #+#    #+#             */
-/*   Updated: 2023/11/11 21:14:07 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/12 09:21:24 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int  ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
 	unsigned int	diff;
+	size_t			i;
 
 	i = 0;
 	if (n == 0)

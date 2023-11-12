@@ -6,7 +6,7 @@
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:06:04 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 21:11:42 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/12 08:48:02 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_putnbr_fd(int n, int fd)
 		if (n < 0)
 		{
 			if (!b)
-				ft_putchar_fd( '-', fd);
+				ft_putchar_fd('-', fd);
 			a = -a;
 		}
 		ft_putchar_fd((a + '0'), fd);

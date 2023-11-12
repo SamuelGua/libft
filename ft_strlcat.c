@@ -6,7 +6,7 @@
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:01:43 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 20:32:22 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/12 08:50:33 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 	return (i);
 }*/
 
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	str_len;
@@ -40,11 +40,3 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 	else
 		return (str_len + ft_strlen(src));
 }
-/*
-int    main()
-{
-    char d[10] = "origami";
-    char s[10] = "master";
-    printf("%d", ft_strlcat(d, s, 9));
-    return(0);
-}*/

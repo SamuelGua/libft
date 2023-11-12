@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 17:09:39 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 20:28:01 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/12 08:11:43 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,3 @@ int	ft_atoi(const char *c)
 	}
 	return (res * minus);
 }
-
-/*int main()
-{
-    printf("%d",ft_atoi(" -5i4"));
-}*/

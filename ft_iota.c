@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iota.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:46:39 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 20:28:34 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/12 08:11:53 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,3 @@ char	*ft_itoa(int n)
 	}
 	return (new);
 }
-
-/*
-int main()
-{
-    int n = -100;
-
-    char *new;
-
-    new = ft_itoa(n);
-    printf("%s",new);
-    free(new);
-}*/

@@ -6,7 +6,7 @@
 /*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:30:04 by samuelcely        #+#    #+#             */
-/*   Updated: 2023/11/11 21:15:39 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/12 09:18:41 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@
 	return (i);
 }*/
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	unsigned int	i;
-	int	j;
+	int				j;
 
 	i = 0;
 	j = ft_strlen(needle);
 	if (j == 0)
-		return ( (char *)haystack);
+		return ((char *) haystack);
 	while (haystack[i] && i < len)
 	{
 		j = 0;
@@ -40,7 +40,7 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 			{
 				j++;
 				if (needle[j] == '\0')
-					return ( (char *)&haystack[i]);
+					return ((char *) &haystack[i]);
 			}
 		}
 		i++;
