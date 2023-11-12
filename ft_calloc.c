@@ -6,7 +6,7 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:34:34 by scely             #+#    #+#             */
-/*   Updated: 2023/11/12 08:08:52 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/12 14:01:58 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,14 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*d;
-	int		i;
-	int		j;
+	size_t 		i;
+	size_t 		j;
 
+	if ((count < 0 || size < 0))
+		return (0);
+	else
+		j = count * size;
 	i = 0;
-	j = count * size;
 	d = malloc(j);
 	if (d == 0)
 		return (0);

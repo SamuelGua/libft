@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puntendl_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:02:23 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 20:56:07 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/12 15:13:19 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, &s[i], 1);
 		i++;
 	}
-	write(1, "\0", 1);
+	write(fd, "\n", 1);
 }

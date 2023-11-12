@@ -6,7 +6,7 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:46:39 by scely             #+#    #+#             */
-/*   Updated: 2023/11/12 08:11:53 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/12 16:04:43 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static int	ft_nulen(int o)
 	int	i;
 
 	i = 0;
+	if (o <= 0)
+		i++;
 	while (o != 0)
 	{
 		o /= 10;
@@ -25,29 +27,31 @@ static int	ft_nulen(int o)
 	return (i);
 }
 
+
 char	*ft_itoa(int n)
 {
 	char	*new;
 	int		i;
+	long int n2;
 
+	n2 = n;
 	i = ft_nulen(n);
-	if (n > 0)
-		new = malloc(sizeof(char) * i + 1);
-	else
-	{
-		new = malloc(sizeof(char) * i + 2);
-		n *= -1;
-		new[0] = '-';
-		i++;
-	}
+	new = malloc(sizeof(char) * i + 1);
 	if (!new)
 		return (0);
+	if (n < 0)
+	{
+		n2 *= -1;
+		new[0] = '-';
+	}
 	new[i] = '\0';
-	while (n > 0)
+	if (n2 == 0)
+		new[0] = '0'; 
+	while (n2 > 0)
 	{
 		i--;
-		new[i] = n % 10 + '0';
-		n /= 10;
+		new[i] = n2 % 10 + '0';
+		n2 /= 10;
 	}
 	return (new);
 }
