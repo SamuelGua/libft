@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:13:29 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 20:31:31 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/13 19:29:34 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 /*int	ft_strlen(const char *s)
 {
-	int	i;
+	int		i;
+	char	*new;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (s[i])
 		i++;
 	return (i);
 }*/
-
-char	*ft_strjoin(char const	*s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*new;
-	int		i;
-	int		j;
-
 	i = ft_strlen(s1) + ft_strlen(s2);
 	new = malloc(sizeof(char) * i + 1);
 	if (!new)
@@ -52,13 +50,13 @@ char	*ft_strjoin(char const	*s1, char const *s2)
 }
 
 /*
-int main()
+int	main(void)
 {
-    char *d =  "Je m'appel, ";
-    char *c = "Samuel.";
-    char *e;
+	char *d =  "Je m'appel, ";
+	char *c = "Samuel.";
+	char *e;
 
-    e = ft_strjoin(d,c);
-    printf("%s", e);
-    free(e);
+	e = ft_strjoin(d,c);
+	printf("%s", e);
+	free(e);
 }*/

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:57:14 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 20:30:38 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/13 19:29:23 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strdup(const char *src)
-{	
+{
 	int		i;
 	char	*dest;
 
@@ -37,8 +37,8 @@ char	*ft_strdup(const char *src)
 
 /*int   main()
 {
-        char    test[] = "bonjour";
-        
-        printf("%s",ft_strdup(test));
-        return 0;
+		char    test[] = "bonjour";
+
+		printf("%s",ft_strdup(test));
+		return (0);
 }*/

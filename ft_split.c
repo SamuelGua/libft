@@ -6,13 +6,13 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:42:55 by scely             #+#    #+#             */
-/*   Updated: 2023/11/12 14:44:29 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/13 19:29:19 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen_split(const char *s, char c)
+static int	ft_strlen_split(const char *s, char c)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	ft_strlen_split(const char *s, char c)
 	return (i);
 }
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	nb_words;
@@ -40,17 +40,17 @@ int	count_words(char const *s, char c)
 	return (nb_words);
 }
 
-char	**ft_malloc(char const *s, char c, int i)
+static char	**ft_malloc(char const *s, char c, int i)
 {
-	char		**dest;
-	int			k;
-	int			j;
+	char	**dest;
+	int		k;
+	int		j;
 
 	j = 0;
 	dest = malloc(sizeof(char *) * (i + 1));
 	if (!dest)
 		return (0);
-	dest[i] = (char *) '\0';
+	dest[i] = (char *)'\0';
 	i = 0;
 	while (s[i])
 	{
@@ -71,10 +71,10 @@ char	**ft_malloc(char const *s, char c, int i)
 
 char	**ft_split(char const *s, char c)
 {
-	char		**new;
-	int			i;
-	int			k;
-	int			j;
+	char	**new;
+	int		i;
+	int		k;
+	int		j;
 
 	i = count_words(s, c);
 	new = ft_malloc(s, c, i);
@@ -95,3 +95,22 @@ char	**ft_split(char const *s, char c)
 	}
 	return (new);
 }
+
+/*#include <stdio.h>
+
+int	main(void)
+{
+	int i;
+	char **ga;
+	char s[20] = "";
+	char e = '.';
+
+	i = 0;
+	printf("before : %s\n", s);
+	ga = ft_split(s, e);
+	while (ga[i])
+	{
+		printf("after ft_split : %s\n", ga[i]);
+		i++;
+	}
+}*/

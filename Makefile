@@ -11,7 +11,7 @@ OBJ	= $(SRC:.c=.o)
 
 all : $(NAME)
 
-%.o : %.c
+%.o : %.c 
 	$(CC) $(CFLAGS) -o $@  -c $<
 
 $(NAME) : $(OBJ)
@@ -24,6 +24,10 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
+
+so:
+	$(CC) -fPIC $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so $(OBJ)
 
 .PHONY : all clean fclean re
 

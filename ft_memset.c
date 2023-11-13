@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:57:39 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 21:10:05 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/13 19:29:02 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char	*p;
+	char *p;
 
 	p = s;
 	while (n > 0)

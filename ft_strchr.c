@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 15:59:56 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 20:30:31 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/13 19:29:21 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,20 @@ char	*ft_strchr(const char *s, int c)
 {
 	int			i;
 	const char	*d;
+	char		c2;
 
+	c2 = c;
 	i = 0;
-	while (s[i] != c && s[i])
+	while (s[i] != c2 && s[i])
 		i++;
+	if (s[i] != c2)
+		return (0);
 	d = &s[i];
 	return ((char *)d);
 }
 
 /*
-int main()
+int	main(void)
 {
-    printf("%s", ft_strchr("OK for now", 'o'));
+	printf("%s", ft_strchr("OK for now", 'o'));
 }*/

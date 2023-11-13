@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:01:43 by scely             #+#    #+#             */
-/*   Updated: 2023/11/12 08:50:33 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/13 19:29:36 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,16 @@
 /*unsigned int	ft_strlen(const char *str)
 {
 	unsigned int	i;
+	unsigned int	i;
+	unsigned int	str_len;
 
 	i = 0;
 	while (str[i])
 		i++;
 	return (i);
 }*/
-
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	str_len;
-
 	str_len = ft_strlen(dst);
 	i = 0;
 	while ((i + str_len + 1) < dstsize && src[i])

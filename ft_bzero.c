@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:08:39 by scely             #+#    #+#             */
-/*   Updated: 2023/11/11 20:56:43 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/13 19:28:34 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 		s++;
 	}
-	return ((void )s);
+	return ((void)s);
 }
