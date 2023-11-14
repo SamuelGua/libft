@@ -6,16 +6,11 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:06:04 by scely             #+#    #+#             */
-/*   Updated: 2023/11/13 19:29:07 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/14 12:02:28 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
 
 void	ft_putnbr_fd(int n, int fd)
 {

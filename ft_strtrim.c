@@ -6,7 +6,7 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:29:10 by scely             #+#    #+#             */
-/*   Updated: 2023/11/13 19:30:22 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/14 13:01:18 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,11 +61,11 @@ static int	find_end(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char *new;
-	int start;
-	int end;
-	int i;
-	int k;
+	char	*new;
+	int		start;
+	int		end;
+	int		i;
+	int		k;
 
 	start = find_start(s1, set);
 	end = find_end(s1, set);
@@ -81,11 +81,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!new)
 		return (NULL);
 	while (start < (i - end))
-	{
-		new[k] = s1[start];
-		k++;
-		start++;
-	}
+		new[k++] = s1[start++];
 	new[k] = '\0';
 	return (new);
 }

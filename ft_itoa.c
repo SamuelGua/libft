@@ -1,42 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_iota.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 11:13:29 by scely             #+#    #+#             */
-/*   Updated: 2023/11/14 11:28:21 by scely            ###   ########.fr       */
+/*   Created: 2023/11/08 12:46:39 by scely             #+#    #+#             */
+/*   Updated: 2023/11/13 19:28:40 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+static int	ft_nulen(int o)
 {
-	char	*new;
-	int		i;
-	int		j;
+	int	i;
 
-	i = ft_strlen(s1) + ft_strlen(s2);
+	i = 0;
+	if (o <= 0)
+		i++;
+	while (o != 0)
+	{
+		o /= 10;
+		i++;
+	}
+	return (i);
+}
+
+char	*ft_itoa(int n)
+{
+	char		*new;
+	int			i;
+	long int	n2;
+
+	n2 = n;
+	i = ft_nulen(n);
 	new = malloc(sizeof(char) * i + 1);
 	if (!new)
 		return (0);
-	i = 0;
-	j = 0;
-	while (s1[i])
+	if (n < 0)
 	{
-		new[j] = s1[i];
-		i++;
-		j++;
+		n2 *= -1;
+		new[0] = '-';
 	}
-	i = 0;
-	while (s2[i])
+	new[i] = '\0';
+	if (n2 == 0)
+		new[0] = '0';
+	while (n2 > 0)
 	{
-		new[j] = s2[i];
-		i++;
-		j++;
+		i--;
+		new[i] = n2 % 10 + '0';
+		n2 /= 10;
 	}
-	new[j] = '\0';
-	return ((char *)new);
+	return (new);
 }

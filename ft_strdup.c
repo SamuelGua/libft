@@ -6,7 +6,7 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:57:14 by scely             #+#    #+#             */
-/*   Updated: 2023/11/13 19:29:23 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/14 11:23:54 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,3 @@ char	*ft_strdup(const char *src)
 	dest[i] = '\0';
 	return (dest);
 }
-
-/*int   main()
-{
-		char    test[] = "bonjour";
-
-		printf("%s",ft_strdup(test));
-		return (0);
-}*/

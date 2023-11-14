@@ -6,7 +6,7 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:42:55 by scely             #+#    #+#             */
-/*   Updated: 2023/11/13 19:29:19 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/14 12:34:38 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,8 @@ static char	**ft_malloc(char const *s, char c, int i)
 	j = 0;
 	dest = malloc(sizeof(char *) * (i + 1));
 	if (!dest)
-		return (0);
-	dest[i] = (char *)'\0';
+		return (NULL);
+	dest[i] = (char *) '\0';
 	i = 0;
 	while (s[i])
 	{
@@ -95,22 +95,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (new);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	int i;
-	char **ga;
-	char s[20] = "";
-	char e = '.';
-
-	i = 0;
-	printf("before : %s\n", s);
-	ga = ft_split(s, e);
-	while (ga[i])
-	{
-		printf("after ft_split : %s\n", ga[i]);
-		i++;
-	}
-}*/
