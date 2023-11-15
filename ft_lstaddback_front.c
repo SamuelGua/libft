@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstaddback_front.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 17:01:43 by scely             #+#    #+#             */
-/*   Updated: 2023/11/14 15:32:55 by scely            ###   ########.fr       */
+/*   Created: 2023/11/15 10:01:08 by scely             #+#    #+#             */
+/*   Updated: 2023/11/15 11:42:12 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int		i;
-	size_t	str_len;
-
-	if (dst == NULL && dstsize == 0)
-		return (0);
-	str_len = ft_strlen(dst);
-	i = 0;
-	while ((i + str_len + 1) < dstsize && src[i])
-	{
-		dst[str_len + i] = src[i];
-		i++;
-	}
-	dst[str_len + i] = '\0';
-	if (dstsize < str_len)
-		return (dstsize + ft_strlen(src));
-	else
-		return (str_len + ft_strlen(src));
+    lst = ft_lstlast(*lst);
+    lst->next = new;
+    lst = new;
+    
 }
+
+/*int main()
+{
+    t_list *l = lstnew(ft_strdup("nyacat"));
+	t_list *n = lstnew(ft_strdup("OK"));
+
+    
+}*/
