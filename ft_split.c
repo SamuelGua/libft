@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samuelcely <samuelcely@student.42.fr>      +#+  +:+       +#+        */
+/*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:42:55 by scely             #+#    #+#             */
-/*   Updated: 2023/11/15 19:01:03 by samuelcely       ###   ########.fr       */
+/*   Updated: 2023/11/16 13:01:32 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ char	**ft_split(char const *s, char c)
 	int		k;
 	int		j;
 
+	if (s == NULL)
+		return (NULL);
 	new = ft_malloc(s, c, count_words(s, c));
 	if (!new)
 		return (NULL);
@@ -88,8 +90,7 @@ char	**ft_split(char const *s, char c)
 		k = 0;
 		while (s[i] != c && s[i])
 		{
-			new[j][k++] = s[i];
-			i++;
+			new[j][k++] = s[i++];
 			if (s[i] == c)
 				j++;
 		}

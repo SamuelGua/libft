@@ -6,7 +6,7 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 12:29:10 by scely             #+#    #+#             */
-/*   Updated: 2023/11/14 13:01:18 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/16 12:58:56 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		k;
 
+	if (s1 == NULL)
+		return (NULL);
 	start = find_start(s1, set);
 	end = find_end(s1, set);
 	i = ft_strlen(s1);
