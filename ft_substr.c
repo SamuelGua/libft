@@ -6,7 +6,7 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 10:56:16 by scely             #+#    #+#             */
-/*   Updated: 2023/11/13 19:29:52 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/16 11:24:16 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*new;
 	int		i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	if (start > ft_strlen(s))
 		len = 0;

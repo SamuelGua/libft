@@ -6,7 +6,7 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:53:09 by scely             #+#    #+#             */
-/*   Updated: 2023/11/13 19:29:42 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/16 11:36:51 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	int		len;
 
+	if (s == NULL)
+		return (NULL);
 	len = 0;
 	while (s[len])
 		len++;

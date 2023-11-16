@@ -6,17 +6,17 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 09:56:12 by scely             #+#    #+#             */
-/*   Updated: 2023/11/15 10:40:14 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/16 11:48:22 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    if (lst == NULL)
-        return (0);
-    while (lst->next)
-        lst = lst->next;
-    return (lst);
+	if (lst == NULL)
+		return (0);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

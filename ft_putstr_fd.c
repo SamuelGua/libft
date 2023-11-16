@@ -6,7 +6,7 @@
 /*   By: scely <scely@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:59:50 by scely             #+#    #+#             */
-/*   Updated: 2023/11/13 19:29:09 by scely            ###   ########.fr       */
+/*   Updated: 2023/11/16 11:39:59 by scely            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (s == NULL)
+		return ((void) NULL);
 	i = 0;
 	while (s[i])
 	{
